@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Felipe Torres"
+title                    : "Technology, and networking"
 title_separator          : "-"
 name                     : "Felipe Torres"
 description              : "Posts about Technology, and networking"
