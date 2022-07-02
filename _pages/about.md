@@ -56,7 +56,7 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 
 ###### 2020 - 2022
 ##### freeCodeCamp.org
-[] Responsive Web Design Certification (ongoing)
+~ Responsive Web Design Certification (ongoing)
 [] Legacy Responsive Web Design Certification (ongoing)
 [] JavaScript Algorithms and Data Structures Certification (ongoing)
 [] Data Visualization Certification (ongoing)
