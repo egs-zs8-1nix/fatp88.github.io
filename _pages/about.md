@@ -1,8 +1,11 @@
 ---
+
 title: "About"
 permalink: /about/
 date: 2019-02-15
+
 ---
+
 # **About me.**
 
 I am an Electronics and Telecommunications engineer with a broad list of interests. I'm passionate about the electronics world, satellite communications, networking and cloud computing.
@@ -11,30 +14,38 @@ I have had my fair share of experience with cyber security with the management o
 
 My current specialization is Data Science, starting with Data Analytics. I'll blog my progress here, while describing my steps from the start,  including the future projects I'll work on. Last but not least, I'll start learning more about machine learning as well.
 
-
 ### Work Experience
 
 2012 - 2013
+
 - Technology School Administrator Assistant
-> Escuela Politécnica Nacional, Ladrón de Guevara Av. 253, Quito 170517
+  
+  > Escuela Politécnica Nacional, Ladrón de Guevara Av. 253, Quito 170517
 
 2015 - 2016
+
 - IT technician IPCC R1
-> MEGADATOS S.A. (Telconet/Netlife) Núñez de Vela E3-13, Atahualpa Av.
+  
+  > MEGADATOS S.A. (Telconet/Netlife) Núñez de Vela E3-13, Atahualpa Av.
 
 2018 - 2022
-- Freelance Consultant
->  Quito city, De los Chillos Valley, and Guayaquil.
 
+- Freelance Consultant
+  
+  >  Quito city, De los Chillos Valley, and Guayaquil.
 
 ### EDUCATION
 
 ###### 2008 - 2015
+
 ##### Escuela Politecnica Nacional
+
 - Telecommunications and Electronics Engineer
 
 ###### 2016 - 2019
+
 ##### Cisco Networking Academy
+
 - Intro to IoT
 - Mobility Fundamentals Series: BYOD
 - Intro to Cybersecurity
@@ -55,25 +66,27 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 - CCNA R&S: Introduction to Networks Escuela Politécnica Nacional
 
 ###### 2020 - 2022
-##### freeCodeCamp.org
-+ Responsive Web Design Certification (ongoing)
-Legacy Responsive Web Design Certification (ongoing)
-JavaScript Algorithms and Data Structures Certification (ongoing)
-Data Visualization Certification (ongoing)
-Back End Development and APIs Certification (ongoing)
-Quality Assurance Certification (ongoing)
-Scientific Computing with Python Certification (ongoing)
-Data Analysis with Python Certification (ongoing)
-Information Security Certification (ongoing)
-Machine Learning with Python Certification (ongoing)
-Relational Database (Beta) Certification (ongoing)
 
+##### freeCodeCamp.org
+
+- Responsive Web Design Certification **(ongoing)**
+- Legacy Responsive Web Design Certification **(ongoing)**
+- JavaScript Algorithms and Data Structures Certification **(ongoing)**
+- Data Visualization Certification **(ongoing)**
+- Back End Development and APIs Certification **(ongoing)**
+- Quality Assurance Certification **(ongoing)**
+- Scientific Computing with Python Certification **(ongoing)**
+- Data Analysis with Python Certification **(ongoing)**
+- Information Security Certification **(ongoing)**
+- Machine Learning with Python Certification **(ongoing)**
+- Relational Database (Beta) Certification **(ongoing)**
 
 ### Personal Skills Competences
 
 Mother tongue(s): 
+
 - Spanish – Native level
-Other language(s): 
+  Other language(s): 
 - English – Advance level
 - Japanese – Beginner level
 
@@ -95,6 +108,7 @@ Other language(s):
 - WLAN diagnostics, design and maintenance.
 
 ### Other skills and competences
+
 - Commercial awareness
 - Communication
 - Teamwork
@@ -105,7 +119,6 @@ Other language(s):
 - Ability to work under pressure
 - Confidence
 - Analytical skills
-
 
 ### Additional Information
 
@@ -121,10 +134,8 @@ My work has been highly evaluated by my bosses, giving me the opportunity too wo
 
 Lately I had been invited by Jeremy Martin from IWC (informationwarfarecenter.com) to join the internship for Cyber-security career.
 
-
 ### Interests & Hobbies
 
 I enjoy watching movies with my family. Reading from comics to Japanese  literature, I've been a huge fan of Japanese animation from 1995, and lately I enjoy watching series like Uchuu no Kyoudai (Space Brothers) and Dr.  Stone. TV series like Big bang theory, White Collar and Suits are among my favorite American shows.
 
 Taking a nap, enjoying eating and biking are a must for my life as well. 
-
