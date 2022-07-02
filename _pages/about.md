@@ -29,12 +29,12 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 
 ### Education
 
-###### 2008 - 2015
-##### Escuela Politecnica Nacional
+#### 2008 - 2015
+#### Escuela Politecnica Nacional
 - Telecommunications and Electronics Engineer
 
-###### 2016 - 2019
-##### Cisco Networking Academy
+#### 2016 - 2019
+#### Cisco Networking Academy
 - Intro to IoT
 - Mobility Fundamentals Series: BYOD
 - Intro to Cybersecurity
@@ -54,8 +54,8 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 - R&S: Scaling Networks Escuela Politécnica Nacional
 - CCNA R&S: Introduction to Networks Escuela Politécnica Nacional
 
-###### 2020 - 2022
-##### freeCodeCamp.org
+#### 2020 - 2022
+#### freeCodeCamp.org
 - Responsive Web Design Certification **(ongoing)**
 - Legacy Responsive Web Design Certification **(ongoing)**
 - JavaScript Algorithms and Data Structures Certification **(ongoing)**
