@@ -18,9 +18,11 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 2012 - 2013
 - Technology School Administrator Assistant
    > Escuela Politécnica Nacional, Ladrón de Guevara Av. 253, Quito 170517
+   
 2015 - 2016
 - IT technician IPCC R1
   > MEGADATOS S.A. (Telconet/Netlife) Núñez de Vela E3-13, Atahualpa Av.
+  
 2018 - 2022
 - Freelance Consultant
   >  Quito city, De los Chillos Valley, and Guayaquil.
