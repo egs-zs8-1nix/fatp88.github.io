@@ -11,8 +11,7 @@ I have had my fair share of experience with cyber security with the management o
 
 My current specialization is Data Science, starting with Data Analytics. I'll blog my progress here, while describing my steps from the start,  including the future projects I'll work on. Last but not least, I'll start learning more about machine learning as well.
 
-</br>
-</br>
+
 
 ### Work Experience
 
@@ -34,8 +33,7 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 
 >  Quito city, De los Chillos Valley, and Guayaquil.
 
-</br>
-</br>
+
 
 ### EDUCATION
 
@@ -111,8 +109,7 @@ My current specialization is Data Science, starting with Data Analytics. I'll bl
 > 
 > Relational Database (Beta) Certification (ongoing)
 
-</br>
-</br>
+
 
 ### Personal Skills Competences
 
@@ -174,8 +171,7 @@ Other language(s):
 
 - Analytical skills
 
-</br>
-</br>
+
 
 ### Additional Information
 
@@ -191,8 +187,6 @@ My work has been highly evaluated by my bosses, giving me the opportunity too wo
 
 Lately I had been invited by Jeremy Martin from IWC (informationwarfarecenter.com) to join the internship for Cyber-security career.
 
-</br>
-</br>
 
 ### Interests & Hobbies
 
