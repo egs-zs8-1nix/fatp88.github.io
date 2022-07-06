@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Technology, and networking"
+title                    : "Data Analysis blog"
 title_separator          : "-"
 name                     : "Felipe Torres"
-description              : "Posts about Technology, and networking"
+description              : "Posts about my Data Analysis path"
 url                      : "https://egs-zs8-1nix.github.io/fatp88.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "egs-zs8-1nix.github.io/fatp88.github.io/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "egs-zs8-1nix.github.io/fatp88.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 logo                     : "/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
@@ -127,7 +127,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "snowscan"
+  twitter          : 
   vine             :
   weibo            :
   xing             :

