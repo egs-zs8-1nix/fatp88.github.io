@@ -22,7 +22,6 @@ tags:
 
 ![](/assets/images/htb-writeup-ready/ready_logo.png)
 
-## NumPy is absolute magic.
 
 For my first blog entry, I'd like to talk about NumPy, a python library used for mathematical operations.
 
@@ -58,22 +57,22 @@ This is not in the scope of Data Analysis, but admittedly, now I know that NumPy
 
  - Python Data Analytics by Fabio Nell. Chapter 3:"The Numpy library". Apress Media 2015. ISBN-13 (pbk): 978-1-4842-0959-2 ISBN-13 (electronic): 978-1-4842-0958-5
 
- - https://numpy.org/doc/stable/reference/arrays.ndarray.html
+ - <https://numpy.org/doc/stable/reference/arrays.ndarray.html>
 
- - https://numpy.org/doc/stable/numpy-user.pdf
+ - <https://numpy.org/doc/stable/numpy-user.pdf>
 
- - https://morioh.com/p/70493e6bfaed
+ - <https://morioh.com/p/70493e6bfaed>
 
- - https://en.wikipedia.org/wiki/Single_instruction,_multiple_data
+ - <https://en.wikipedia.org/wiki/Single_instruction,_multiple_data>
 
- - https://en.wikipedia.org/wiki/Vector_processor
+ - <https://en.wikipedia.org/wiki/Vector_processor>
 
- - https://stackoverflow.com/questions/14259737/what-is-the-relationship-between-vectorization-and-embarrasingly-parallel
+ - <https://stackoverflow.com/questions/14259737/what-is-the-relationship-between-vectorization-and-embarrasingly-parallel>
 
- - https://insidebigdata.com/2017/09/20/importance-vectorization-resurfaces/
+ - <https://insidebigdata.com/2017/09/20/importance-vectorization-resurfaces/>
 
- - https://www.quantifisolutions.com/vectorization-part-2-why-and-what/
+ - <https://www.quantifisolutions.com/vectorization-part-2-why-and-what/>
 
- - https://www.upgrad.com/blog/vectorization-and-broadcasting-in-python/#:~:text=Vectorization%20and%20Broadcasting%20are%20ways,don't%20face%20any%20bottlenecks.
+ - <https://www.upgrad.com/blog/vectorization-and-broadcasting-in-python/#:~:text=Vectorization%20and%20Broadcasting%20are%20ways,don't%20face%20any%20bottlenecks.>
 
 
